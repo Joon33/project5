@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+
+/* ******************* 레이아웃 구성시작 **************** */
+ #wrap{ height: auto; }
+
+ #header{ height: 63px; }
+
+ #mainview{ height: auto; }
+ #mainview .m-top{ 
+  height: 504px;
+  background: #121212 url(../images/index/i_mainview-bg.png) no-repeat top center;
+ }
+ #mainview .m-bottom{ height: 105px; background-color: #333; }
+
+ #contents{ height: auto; }
+ #contents>div{ padding: 105px 0; }
+ #contents .work{ padding-top: 0; }
+
+ #footer{ height: 126px; padding: 42px 0; background-color: #333; }
+
+ .container{ width: 1170px; height: 100%; margin:auto; }
+ 
+/* ******************* 공통영역 선언시작 **************** */
+
+body{
+  font-family: '맑은 고딕', sans-serif;
+}
+ 
+/* Button Style */
+.btn{
+  display: inline-block;
+  height: 42px;
+  text-align: center;
+  font: 700 1.4rem/42px 'Nanum Gothic', sans-serif;
+}
+
+.btn1{ 
+  width: 170px;
+  font-size: 1.6rem;
+  background-color: #ad5251;
+  color: #fff;
+ }
+.btn1:hover{ background-color: #50adae; }
+
+.btn2{
+  color: #2d2d2d;
+  border: 1px solid #888;
+  padding: 0 20px;
+}
+.btn2:hover{
+  background-color: #ad5251;
+  border: 2px solid #ad5251;
+  color: #fff;
+}
+
+/* Title Style */
+.title{ height: auto; text-align: center; margin-bottom: 63px; }
+.title h2{ 
+  height: 42px;
+  font: 400 3rem/42px 'Nanum Gothic', sans-serif;
+}
+.title p{
+  height: 21px;
+  font: 400 2rem/42px 'Nanum Gothic', sans-serif;
+  color: #888
+}
+ 
+/* ******************* 개별영역 선언시작 **************** */
+
+/* ************* header Area Start ********** */
+/* Logo */
+#header h1{ width: 110px; height: 63px; float: left; }
+#header h1 a{
+  background-image: url(../images/index/i_logo.png.png);
+  background-position: 50% 50%;
+}
+/* Gnb */
+#header .gnb{ width: 500px; height: 63px; float: right; }
+#header .gnb li{ height: 100%; float: left; }
+#header .gnb li a{
+  display: block;
+  height: 100%;
+  padding: 0 15px;
+  font: 700 1.4rem/63px 'Nanum Gothic', sans-serif;
+  position: relative;
+}
+
+#header .gnb li a:hover{ color: #c00 }
+#header .gnb li a:hover::after{
+  content:'';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #c00;
+  position: absolute; left: 0; bottom: 0;
+}
+
+/* ************* mainview Area Start ********** */
+#mainview>div .container{ position: relative; }
+
+/* *********** m-top Area Start ******** */
+#mainview .m-top{ overflow: hidden; }
+/* text */
+#mainview .m-top .text-box{
+  width: 400px;
+  height: 152px;  
+  color: #fff;
+  position: absolute; left: 0; top: 50%;
+  margin-top: -76px;
+}
+#mainview .m-top .text-box h2{
+  height: 110px;
+  font: 400 6rem/50px 'Roboto', sans-serif;
+}
+#mainview .m-top .text-box h2 span{
+  font-size: 3rem;
+  font-weight: 300;
+}
+#mainview .m-top .text-box p{
+  height: 42px;
+  font: 400 1.6rem/42px 'arial', sans-serif;
+}
+
+/* img */
+#mainview .m-top .img-box{
+  width: 491px;
+  height: 347px;
+  position: absolute; right: 70px; bottom: 84px;
+  animation-delay:1s;
+}
+
+/* ********* m-bottom Area Start ******** */
+#mainview .m-bottom{ color:#fff; padding-top: 28px; }
+#mainview .m-bottom h3,
+#mainview .m-bottom p{
+  font: 400 1.6rem/25px 'Nanum Gothic', sans-serif;
+}
+#mainview .m-bottom p{ color: #888; }
+#mainview .m-bottom a{
+  position: absolute; right: 100px;top: 3px;
+}
+
+
+/* ************* contents Area Start ********** */
+/* ********* about Area Start ******** */
+
+/* Title Area Start */
+#contents .about .title p{ font-style: italic; }
+
+/* Content Area Start */
+#contents .about .content{
+  display: flex;
+  justify-content: space-between;
+}
+#contents .about .content>div{
+  width: 370px;
+  height: 252px;
+  text-align: center;
+}
+#contents .about .content>div .icon{
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  line-height: 105px;
+  margin-bottom: 21px;
+  border-radius: 50%;
+  font-size: 3.6rem;
+  color: #0faf97;
+  border: 2px solid #0faf97;
+  cursor: pointer;
+}
+#contents .about .content>div .icon:hover{
+  color: #fff;
+  background-color: #0faf97;
+}
+#contents .about .content>div h3{
+  height: 21px;
+  margin-bottom: 21px;
+  font: 700 1.8rem/21px 'Nanum Gothic', sans-serif;
+}
+
+
+/* ********* work Area Start ******** */
+
+/* Content Area Start */
+#contents .work .gallery{ height: auto; }
+#contents .work .gallery li{
+  width: 370px;
+  height: 336px;
+  border: 1px solid #888;
+  margin: 0 30px 42px 0;
+  text-align: center;
+  float: left;
+}
+#contents .work .gallery li:nth-child(3n){ margin-right: 0; }
+#contents .work .gallery li:nth-child(n+4){ margin-bottom: 0; }
+
+#contents .work .gallery li img{ width: 100%; height: 231px; margin-bottom: 21px; }
+#contents .work .gallery li h3{
+  height: 21px;
+  font: 400 1.8rem/21px 'Roboto', sans-serif;
+}
+#contents .work .gallery li .brand{
+  height: 21px;
+  font: 400 1.6rem/21px 'Roboto', sans-serif;
+  color: #c00;
+  margin-bottom: 21px;
+}
+#contents .work .gallery li a{
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  font: 400 1.4rem/35px 'arial', sans-serif;
+  border: 1px solid #888;
+  color: #2d2d2d;
+  background-color: #fff;
+}
+#contents .work .gallery li a:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+/* ********* infor Area Start ******** */
+
+/* Title Area Start */
+#contents .infor{ background-color: #ddd; }
+#contents .infor .title p{ font-size: 1.4rem; }
+/* Content Area Start */
+#contents .infor .content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#contents .infor .content .text-box,
+#contents .infor .content img{ width: 570px; height: 336px; }
+
+#contents .infor .content .text-box h3{
+  height: 42px;
+  margin-bottom: 35px;
+  font: 700 1.8rem/42px 'Nanum Gothic', sans-serif;
+  color: #888;
+}
+#contents .infor .content .text-box h3 span{ color: #2d2d2d; margin-right: 3px; }
+#contents .infor .content .text-box ul{ height: auto; margin-bottom: 42px; }
+#contents .infor .content .text-box ul li{
+  height: 21px;
+  margin-bottom: 15px;
+  font: 400 1.4rem/21px '맑은고딕', sans-serif;
+  background: url(../images/index/i_bullet.png) no-repeat 0 50%;
+  text-indent: 30px;
+}
+
+#contents .infor .content .text-box a{ margin-right: 5px; }
+
+
+/* ************* footer Area Start ********** */
+#footer p{ 
+  height: 42px;
+  font: 400 1.4rem/42px 'Nanum Gothic', sans-serif;
+  color: #fff;
+ }
+ 
+ 
